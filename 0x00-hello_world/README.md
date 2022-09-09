@@ -1,1 +1,1 @@
-my first c-programming project
+my c-programming task 2
