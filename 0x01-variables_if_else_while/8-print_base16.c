@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i;
-	char l;
+	char I;
 
 	i = 48;
 	while (i < 58)
@@ -16,11 +16,11 @@ int main(void)
 	putchar(i);
 	i++;
 }
-	l = 'a';
-	while (l <= 'f')
+	I = 'a';
+	while (I <= 'f')
 {
-	putchar(l);
-	l++;
+	putchar(I);
+	I++;
 }
 	putchar('\n');
 	return (0);
