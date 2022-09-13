@@ -1,3 +1,4 @@
+
 int_putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -22,7 +23,6 @@ vim 0-putchar.c
  */
 int main(void)
 
-
 {
 	putchar('_');
 	putchar('p');
@@ -35,4 +35,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
