@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * add - add two integers
  * @num1: The frist integer to be added.
@@ -6,7 +7,7 @@
  *
  * Return: The result of addition.
  */
-ind add(int num1, int num2)
+int add(int num1, int num2)
 {
 	return (num1 + num2);
 }
