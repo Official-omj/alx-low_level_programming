@@ -2,7 +2,7 @@
 /**
  * print_last_digit -function that prints the last digit of a number
  * @n: parameter member n
- * Return: always 0 if success
+ * Return: always o if success
  */
 int print_last_digit(int n)
 {
