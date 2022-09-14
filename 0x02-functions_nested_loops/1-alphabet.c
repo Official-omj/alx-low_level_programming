@@ -4,6 +4,7 @@
  * Return: 0
  */
 
+int_abs(int)
 void print_alphabet(void)
 {
 	char j;
@@ -12,8 +13,8 @@ void print_alphabet(void)
 
 	while (j <= 'z')
 	{
-	_putchar(j);
+	int_putchar(j);
 	j++;
 	}
-	_putchar('\n');
+	int_putchar('\n');
 }
