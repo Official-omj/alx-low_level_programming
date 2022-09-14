@@ -1,16 +1,12 @@
 #include "main.h"
 /**
  * add - add two integers
- * @d: two integer arguments
- * @b: two integer arguments
- * Return: sum
+ * @num1: The frist integer to be added.
+ * @num2: The second integer to be added.
+ *
+ * Return: The result of addition.
  */
-int add(intb, int d)
+ind add(int num1, int num2)
 {
-
-	int sum;
-
-	sum = b + d;
-
-	return (sum);
+	return (num1 + num2);
 }
