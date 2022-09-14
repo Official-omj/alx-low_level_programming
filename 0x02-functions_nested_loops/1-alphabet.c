@@ -4,11 +4,12 @@
  *
  * Return: 0
  */
+
 void print_alphabet(void)
 {
 	char c;
 
-	for (c = 'a'; c <= 'Z'; c++)
+	for (c = 'a'; c <= 'zi'; c++)
 	{
 		_putchar(c);
 	}
