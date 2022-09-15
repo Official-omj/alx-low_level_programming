@@ -1,8 +1,7 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main - Prints first 52 Fibonacci numbers, starting with 1 and 2,
- * separated by comma followed by a space.
+ * main - Prints first 52 Fibonacci numbers
  *
  * Return: Nothing!
  */
@@ -28,5 +27,6 @@ int main(void)
 	}
 
 	printf("\n");
+	
 	return (0);
 }
