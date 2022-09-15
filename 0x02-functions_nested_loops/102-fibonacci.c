@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ * main - Prints first 52 Fibonacci numbers, starting with 1 and 2,
  * separated by comma followed by a space.
  *
- * Return: Always 0.
+ * Return: Nothing!
  */
 int main(void)
 {
