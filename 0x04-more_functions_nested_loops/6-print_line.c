@@ -9,9 +9,9 @@
 
 void print_line(int n)
 {
-	int k;
+	int i;
 
-	for (k = 0; k < n; k++)
+	for (i = 0; i < n; i++)
 	{
 		putchar('_');
 	}
