@@ -33,8 +33,8 @@ void rev_string(char *s)
 	while (i < j)
 	{
 		rdc = s[i];
-		s[i] = s[j]
-		s[j] = rdc
+		s[i] = s[j];
+		s[j] = rdc;
 		i++, j--;
 	}
 }
