@@ -27,9 +27,8 @@ int _strlen(char *s)
 void puts_half(char *str)
 {
 	int i;
-	int len = _strlen(str)
-	
-	/find the index to start depending on even/odd amont of strlen/
+	int len = _strlen(str);
+	/*find the index to start depending on even/odd amont of strlen*/
 	if (len % 2 != 0)
 		i = (len / 2) + 1;
 	else
