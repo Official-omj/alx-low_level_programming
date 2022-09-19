@@ -20,8 +20,8 @@ int _strlen(char *s)
 }
 
 /**
- * idx_num_strats - find index where a digit is first found in string
- * @s: string in string
+ * idx_num_starts - find index where a digit is first found in string
+ * @s: string in search
  * Return: integer index where digit is first found
  */
 
@@ -39,7 +39,7 @@ int idx_num_starts(char *s)
 
 /**
  * find_sign - determine if integer is negative
- * s: integer
+ * @s: integer
  * Return: integer 1 or -1
  */
 int find_sign(char *s)
