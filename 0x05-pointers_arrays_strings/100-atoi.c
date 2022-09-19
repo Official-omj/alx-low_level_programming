@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a sstring
+ * _strlen - returns the length of a string
  * @s: string
  * Return: length
  */
@@ -31,7 +31,7 @@ int idx_num_starts(char *s)
 
 	for (i = 0; i < _strlen(s); i++)
 	{
-		if (s[i] >= '0' && s[i] <== '9')
+		if (s[i] >= '0' && s[i] <= '9')
 			return (i);
 	}
 	return (-1); /*return -1 if no digits found*/
@@ -44,7 +44,7 @@ int idx_num_starts(char *s)
  */
 int find_sign(char *s)
 {
-	int negatives = 0. i = 0, sign = 1;
+	int negatives = 0, i = 0, sign = 1;
 
 	while (i < (idx_num_starts(s)))
 	{
@@ -68,7 +68,7 @@ int _atoi(char *s)
 {
 	int idx_digit_starts = (idx_num_starts(s));
 	int sign;
-	int digitd_to_print = 0;
+	int digits_to_print = 0;
 	int t = 1, i;
 	unsigned int num = 0;
 	int digit = (idx_num_starts(s));
