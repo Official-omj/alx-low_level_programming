@@ -7,7 +7,11 @@
  *
  * Return: always 0
  */
+<<<<<<< HEAD
 int mai(void)
+=======
+int main(void)
+>>>>>>> 50084c9cf081eaa01b3554a0d455c1ec61308756
 {
 	int i, j, k, s;
 	char c[] =
