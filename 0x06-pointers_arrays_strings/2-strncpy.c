@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcpy -mcopies the string
+ * _strncpy -mcopies the string
  * @dest: array that returns
  * @src: the pointer that receive the string
  * @n: times to interate
