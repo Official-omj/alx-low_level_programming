@@ -5,7 +5,7 @@
  * @n1: first number
  * @n2: second number
  * @r: buffer for result
- * @size:_r: buffer size
+ * @size_r: buffer size
  *
  * Return: address of r or 0
  */
