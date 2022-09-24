@@ -3,7 +3,7 @@
  * print_buffer - C functions that prints the content of an
  * inputted number of bytes from a buffer
  * prints 10 bytes per line
- * starts with the position of the first byte in the hexadecimal (0 chars),
+ * starts with the position of the first byte in the hexadecimal (8 chars),
  * starting with '0'.
  * Each line shows the hexadecimal contennt (2 chars) of the buffer,
  * 2 bytesat a time, separated by a space.
