@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib>
 /**
  * print_buffer - C functions that prints the content of an
  *  inputted number of bytes from a buffer.
