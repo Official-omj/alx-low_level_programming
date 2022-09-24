@@ -30,7 +30,8 @@ void print_line(char *c, int s, int l)
 	}
 }
 /**
- * print_buffer - prints a buffer
+ * print_buffer - C function that prints the contents of an
+ * inputted number of bytes from a buffer.
  * @b: buffer to print
  * @size: size of buffer
  *
