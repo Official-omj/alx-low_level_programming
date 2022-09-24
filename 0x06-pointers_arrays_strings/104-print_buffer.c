@@ -1,14 +1,14 @@
 #include "main.h"
 /**
  * print_buffer - C functions that prints the content of an
- * inputted number of bytes from a buffer
+ *  inputted number of bytes from a buffer.
  * prints 10 bytes per line
  * starts with the position of the first byte in the hexadecimal (8 chars),
  * starting with '0'.
- * Each line shows the hexadecimal contennt (2 chars) of the buffer,
- * 2 bytesat a time, separated by a space.
+ * Each line shows the hexadecimal content (2 chars) of the buffer,
+ * 2 bytes at a time, separated by a space.
  * Each line shows the content of the buffer.
- * prints bytes if it is printable; if not, prints '.'.
+ * prints byte if it is printable; if not, prints '.'.
  * Each line ends with a new line '\n'.
  * If the inputted byte size is 0 or less, the function only prints a new line.
  * @b: number of bytes
