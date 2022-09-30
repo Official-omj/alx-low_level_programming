@@ -2,10 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - function to print out the change that needs to given
+ * main - prints the minimum number of coins to make change for an amount
+ * of money
+ *
  * @argc: number of arguments to be passed
- * @argv: number of variables to calculate
- * Return: always 0 for success
+ * @argv: pointer that contains the arrays of the arguments
+ * Return: the minimum number of coins needed to make the change for the amount
+ * of money required
  */
 
 int main(int argc, char *argv[])
