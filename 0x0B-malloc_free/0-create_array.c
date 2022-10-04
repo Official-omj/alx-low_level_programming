@@ -15,10 +15,11 @@ char *create_array(unsigned int size, char c)
 	int i = 0;
 
 	if (size <= 0) /* validate siz input */
-		return (NUL);
+		return (NULL);
 	arr = malloc(sizeof(char) size); /* allocate memory */
 
 	if (arr == NULL) /* validate memory */
+		return (NULL);
 
 	while (i < (int)size) /* set array values to char c */
 	{
