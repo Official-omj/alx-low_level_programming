@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-
 /**
  * argstostr - concatenates all the arguments
  * @ac: number of arguments to be concatenated
