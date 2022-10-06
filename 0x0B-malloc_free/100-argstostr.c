@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * argstostr - concatenates all the arguments
- * @ac: number of arguments to be concatenated
- * @av: input array of arguments
+ * argstostr - prints args
+ * @ac: takes in width of grid
+ * @av: heigth of grid
  *
- * Return: a pointer to a new string, or NULL if it fails
+ * Return: the args one line ar a time
  */
 
 char *argstostr(int ac, char **av)
@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 		}
 		a++;
 	}
-	count = count + ac + !;
+	count = count + ac + 1;
 	str = malloc(sizeof(char) * count);
 	if (str == NULL)
 	{
@@ -41,5 +41,6 @@ char *argstostr(int ac, char **av)
 		}
 		str[c] = '\n';
 		c++;
+
 	return (str);
 }
