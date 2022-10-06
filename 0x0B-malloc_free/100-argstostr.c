@@ -1,12 +1,13 @@
 #include "main.h"
 /**
- * argstostr - prints args
- * @ac: takes in width of grid
- * @av: heigth of grid
+ * argstostr - Concatenates all arguments of the program into a string;
+ * arguments are separated by a new line in the string.
+ * @ac: The number of arguments passed to the program
+ * @av: An array of pointers to the arguments.
  *
- * Return: the args one line ar a time
+ * Return: if ac == 0, av == NULL, orb the function fails - NULL.
+ * otherwise - a pointer to the new string
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *str;
