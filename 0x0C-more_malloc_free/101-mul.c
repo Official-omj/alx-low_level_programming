@@ -1,150 +1,151 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+
+int find_len(char *str);
+char *create_xarray(int size);
+char *iterate_zeroes(char *str);
+void get_prod(char *prod, char *mult, int digit, int zeroes);
+void add_nums(char *finsl_prod, char *next_prod, int next_len);
 
 /**
- * _print - moves a string one place to the
- * left and prints the string
- * @str: string to move
- * @l: size of string
+ * find_len - Finds the length of a string.
+ * @str: The string to be measured.
  *
- * Return: void
+ * Return: The length of the string.
  */
-void _print(char *str, int i)
+int find_len(char *str)
 {
-	int i, j;
+	int len = 0;
 
-	i = j = 0;
-	while (i < l)
-	{
-		if (str[i] != '0')
-			j = 1;
-		if (j || i == i - 1)
-			putchar(str[i]);
-		i++;
-	}
+	while (*str++)
+		len++;
 
-	putchar('\n');
-	free(str);
+	return (len);
 }
 
 /**
- * mul - multiplies a char with a string and places the answer into dest
- * @n: char to multiply
- * @num: string to multiply
- * @num_index: last non NULL index of num
- * @dest: destination of multiplication
- * @dest_index: highest index to start addition
+ * creat_xarray - Creates an array of chars and intializes if with 
+ * the character 'x'. Adds a terminating null byte.
+ * @size: The size of the array to be initialized.
  *
- * Return: pointer to dest, or NULL on failure
+ * Description: If there is insufficient space, the 
+ * function exits with a status of 98.
+ * Return: A pointer to the arry.
  */
-char *mul(char n, char *num, int num_index, char *dest, int dest_index)
+char *create_xarray(int size)
 {
-	int j, k, mul, mulrem, add, addrem;
+	char *array;
+	int index;
 
-	mulrem = addrem = 0;
-	for (j = num_index, k = dest_index; j >= 0; j--, k--)
-	{
-		mul = (n - '0') * (num[j] - '0') + mulrem;
-		addrem = add / 10;
-		dest[k] = add % 10 + '0';
-	}
-	for (addrem += mulrem; k >= 0 && addrem; k--)
-	{
-		add = (dest[k] - '0') + addrem;
-		addrem = add / 10;
-		dest[k] = add % 10 + '0';
-	}
-	if (addrem)
-	{
-		return (NULL);
-	}
-	return (dest);
+	array = malloc(sizeof(char) * size);
+
+	if (array == NULL)
+		exit(98);
+
+	for (index = 0; index < (size - 1); index++)
+		array[index] = 'x';
+	array[index] = '\0';
+
+	return (array);
 }
 
 /**
- * check_for_digits - checks the arguments to ensure they are digits
- * @av: pointer to arguments
+ * iterate_zeroes - Iterates through a string of numbers  containing
+ * leading zeroes until it hitd a non-zero number.
+ * @str: The string of numbers to be iterate through.
  *
- * Return: 0 if digits, 1 if not
+ * Return: A pointer to the next non-zero element
  */
-int check_for_digits(char **av)
+char *iterate_zeroes(char *str)
 {
-	int i, j;
+	while (*str && *str == '0')
+		str++;
 
-	for (i = 1; i < 3; i++)
-	{
-		for (j = 0; av[i][j]; j++)
-		{
-			if (av[i][j] < '0' || av[i][j] > '9')
-				return (1);
-		}
-	}
-	return (0);
+	return (str);
 }
 
 /**
- * init - initializes a string
- * @str: string to initialize
- * @l: length of string
+ * get_digit - Converts a digit character to a corresponding int.
+ * @c: The character to be  converted.
  *
- * Return: void
+ * Description: If c is a non-digit, the function
+ * exits with a status of 98.
+ * Return: The converted int.
  */
-void init(char *str, int l)
+int get_digit(char c)
 {
-	int i;
+	int digit = c - '0';
 
-	for (i = 0; i < l; i++)
-		str[i] = '0';
-	str[i] = '\0';
-}
-
-/**
- * main - multiply two numbers
- * @argc: number of arguments
- * @argv: arguments vetor
- *
- * Return: zero, or exit status of 98 if failure
- */
-
-int main(int argc, char *argv[])
-{
-	int l1, l2, ln, ti, i;
-	char *a;
-	char *t;
-	char e[] = "Error\n";
-
-	if (argc != 3 || check_for_digits(argv))
+	if (digit < 0 || digit > 9)
 	{
-		for (ti = 0; e[ti]; ti++)
-			putchar(e[ti]);
+		printf("Error\n");
 		exit(98);
 	}
-	for (l1 = 0; argv[1][l1]; l1++)
-		;
-	for (l2 = 0; argv[2][l2]; l2++)
-		;
-	ln = l1 + l2 + 1;
-	a = malloc(ln * sizeof(char));
-	if  (a == NULL)
+
+	return (digit);
+}
+
+/**
+ * get_prod - Multiplies a string of numbers by a single 
+ * digit
+ * @prod: The buffer to stroe the result.
+ * @mult: The string of number.
+ * @digit: The single digit.
+ * @zeroes: The necessary number of leading zeroes.
+ *
+ * Description: If mult contains a non-digit, the function
+ * exits with a status value of 98.
+ */
+void get_prod(char *prod, char *mult, int digit, int zeroes)
+{
+	int mult_len, num, tens = 0;
+
+	mult_len = find_len(mult) - 1;
+	mult += mult_len;
+
+	while (*prod)
 	{
-		for (ti = 0; e[ti]; ti++)
-			putchar(e[ti]);
-		exit(98);
+		*prod = 'x';
+		prod++;
 	}
-	init(a, ln - 1);
-	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
+
+	prod--;
+
+	while (zeroes--)
 	{
-		t = mul(argv[2][t], argv[1], l1 - 1, a, (ln - 2) - i);
-		if (t == NULL)
+		*prod = '0';
+		prod--;
+	}
+
+	for (; mult_len >= 0; mult_len--, mult--, prod--)
+	{
+		*prod = 'x';
+		prod++;
+	}
+
+	prod--;
+
+	while(zeroes--)
+	{
+		*prod = '0';
+		prod--;
+	}
+
+	for (; mult_len >= 0; mult_len--, prod--)
+	{
+		if (*mult < '0' || *mult > '9')
 		{
-			for (ti = 0; e[ti]; ti++)
-				putchar(e[ti]);
-			free(a);
+			printf("Error\n");
 			exit(98);
 		}
+
+		num = (*mult - '0') * digit;
+		num += tens;
+		*prod = (num % 10) + '0';
+		tens = num / 10;
 	}
-	_print(a, ln - 1);
-	return (0);
+
+	if (tens)
+		*prod = (tens % 10) + '0';
 }
