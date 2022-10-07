@@ -25,11 +25,11 @@ int find_len(char *str)
 }
 
 /**
- * creat_xarray - Creates an array of chars and intializes if with 
+ * create_xarray - Creates an array of chars and intializes if with
  * the character 'x'. Adds a terminating null byte.
  * @size: The size of the array to be initialized.
  *
- * Description: If there is insufficient space, the 
+ * Description: If there is insufficient space, the
  * function exits with a status of 98.
  * Return: A pointer to the arry.
  */
@@ -87,7 +87,7 @@ int get_digit(char c)
 }
 
 /**
- * get_prod - Multiplies a string of numbers by a single 
+ * get_prod - Multiplies a string of numbers by a single
  * digit
  * @prod: The buffer to stroe the result.
  * @mult: The string of number.
@@ -126,7 +126,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 
 	prod--;
 
-	while(zeroes--)
+	while (zeroes--)
 	{
 		*prod = '0';
 		prod--;
@@ -201,7 +201,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * contains non-digits, the function exits with a status of 98.
  * Return: Always 0.
  */
-int main(int argc, char *argc[])
+int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
 	int size, index, digit, zeroes = 0;
