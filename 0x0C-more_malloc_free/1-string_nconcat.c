@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	lsout = ls1 + n;
 
-	sout = malloc(lsout = 1);
+	sout = malloc(lsout + 1);
 
 	if (sout == NULL)
 		return (NULL);
