@@ -5,9 +5,8 @@
  *
  * Return: 0 if successful
  */
-int main(void)
-
+int main(voi)
 {
-	printf("%s/n", __FILE__);
-	return (0);
+printf("%s/n", __FILE__);
+return (0);
 }
