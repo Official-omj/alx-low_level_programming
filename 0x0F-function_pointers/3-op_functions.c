@@ -3,7 +3,7 @@
 /**
  * op_add - add
  * @a: first operand
- * @b: second operand 
+ * @b: second operand
  * Return: the result of the operation
  */
 int op_add(int a, int b)

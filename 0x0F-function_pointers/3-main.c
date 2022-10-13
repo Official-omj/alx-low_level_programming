@@ -3,7 +3,7 @@
 
 /**
  * main - a basic calculator
- * @argc: the size of the argument vector 
+ * @argc: the size of the argument vector
  * @argv: the argument vector
  *
  * Description: Theis program accepts a number, an operator and another number,
@@ -12,7 +12,7 @@
  * arguments, it prints "Error" and terminates the process with a status of 98.
  * If the operator given is not one of '+', '-', '/' or '%', it prints
  * "Error" and terminates the process with a status of 99. If asked to perform
- * division by 0 (e.g. using the '/' or '%' operators), it prints "Error" and 
+ * division by 0 (e.g. using the '/' or '%' operators), it prints "Error" and
  * terminates the process with a status value of 100.
  *
  * Return: Always 0
