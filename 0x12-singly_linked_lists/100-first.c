@@ -8,7 +8,7 @@
 
 void firstfunc(void) __attribute__ ((constructor));
 
-void firstfunc(void)
+voif firstfunc(void)
 {
 	char *m;
 
