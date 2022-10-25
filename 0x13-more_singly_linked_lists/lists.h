@@ -1,10 +1,10 @@
 #ifndef _LISTS_H
 #define _LISTS_H
 
-#include <stdio.h> /printf/
-#include <stdlib.h> /malloc, free/
+#include <stdio.h> /*printf*/
+#include <stdlib.h> /*malloc, free*/
 #include <stddef.h>
-#include <string.h> /size_t/
+#include <string.h> /*size_t*/
 
 /**
  * struct listint_s - singly linked list
@@ -34,4 +34,5 @@ listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
+
 #endif
